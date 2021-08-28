@@ -21,5 +21,13 @@ public class Model {
     public void add(User user) {
         model.add(user);
     }
-}
 
+    public boolean check(User user) {
+        for (User u : model) {
+            if (user.getLogin().equals(u.getLogin())) {
+                return true;
+            }
+        }
+        return false;
+    }
+}

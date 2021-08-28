@@ -21,7 +21,7 @@
     <br />
     <h2>If you are not registered</h2>
     <div>
-        <button onclick="location.href='/registration.jsp'">Registration</button>
+        <button onclick="location.href='/registration'">Registration</button>
     </div>
 </div>
 </body>

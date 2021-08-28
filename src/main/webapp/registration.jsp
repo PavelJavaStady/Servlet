@@ -25,7 +25,7 @@
     <br />
     <h2>If you are registered </h2>
     <div>
-        <button onclick="location.href='/login.jsp'">Enter the site</button>
+        <button onclick="location.href='/login'">Enter the site</button>
     </div>
 </div>
 </body>
