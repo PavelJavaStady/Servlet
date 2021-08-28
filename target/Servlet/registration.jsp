@@ -11,7 +11,7 @@
 <div style="text-align: center;">
     <h1>Enter the site</h1>
     <br />
-    <form action = "main.jsp" method = "POST">
+    <form action = "/registration" method = "POST">
         Name:  <input type = "text" name = "name">
         <br />
         age:  <input type = "text" name = "age">
@@ -25,7 +25,7 @@
     <br />
     <h2>If you are registered </h2>
     <div>
-        <button onclick="location.href='/login.jsp'">Enter the site</button>
+        <button onclick="location.href='/login'">Enter the site</button>
     </div>
 </div>
 </body>

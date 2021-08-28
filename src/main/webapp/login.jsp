@@ -11,7 +11,7 @@
 <div style="text-align: center;">
     <h1>Enter the site</h1>
     <br />
-    <form action = "main.jsp" method = "POST">
+    <form action = "/login" method = "POST">
         Login:  <input type = "text" name = "login">
         <br />
         Password: <input type = "text" name = "password" />

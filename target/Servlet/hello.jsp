@@ -7,7 +7,7 @@
     <h1>Hell on the site!!!</h1>
     <br />
     <div>
-        <button onclick="location.href='/login.jsp'">leave the site</button>
+        <button onclick="location.href='/login'">leave the site</button>
     </div>
 </div>
 </body>

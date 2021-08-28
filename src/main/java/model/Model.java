@@ -22,12 +22,12 @@ public class Model {
         model.add(user);
     }
 
+
     public boolean check(User user) {
         for (User u : model) {
-            if (user.getLogin().equals(u.getLogin())) {
-                return true;
+            return user.getLogin().equals(u.getLogin());
             }
-        }
         return false;
+        }
     }
-}
+

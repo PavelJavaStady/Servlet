@@ -1,3 +1,5 @@
+model\Model.class
+enities\User.class
+servlets\HelloServlet.class
 servlets\LoginServlet.class
 servlets\RegistrationServlet.class
-servlets\HelloServlet.class
