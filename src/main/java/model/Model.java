@@ -18,16 +18,18 @@ public class Model {
         model = new ArrayList<>();
     }
 
-    public void add(User user) {
+    public void add (User user) {
         model.add(user);
     }
 
 
-    public boolean check(User user) {
-        for (User u : model) {
-            return user.getLogin().equals(u.getLogin());
+    public boolean checkUser (String login) {
+        for (User user : model) {
+            if (login.equals(user.getLogin())) {
+                return true;
             }
-        return false;
         }
+        return false;
     }
+}
 

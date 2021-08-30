@@ -1,5 +1,8 @@
 package servlets;
 
+import enities.User;
+import model.Model;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -12,6 +15,8 @@ import java.io.PrintWriter;
 
 @WebServlet(urlPatterns = "/login")
 public class LoginServlet extends HttpServlet {
+    private Model model = Model.getInstance();
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         ServletContext servletContext = getServletContext();
@@ -21,6 +26,16 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doPost(req, resp);
+        String login = req.getParameter("login");
+        String password = req.getParameter("password");
+        if (model.checkUser(login)) {
+            ServletContext servletContext = getServletContext();
+            RequestDispatcher requestDispatcher = servletContext.getRequestDispatcher("/hello.jsp");
+            requestDispatcher.forward(req, resp);
+        } else {
+            ServletContext servletContext = getServletContext();
+            RequestDispatcher requestDispatcher = servletContext.getRequestDispatcher("/registration.jsp");
+            requestDispatcher.forward(req, resp);
+        }
     }
 }
