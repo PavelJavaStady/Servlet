@@ -27,9 +27,9 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String login = req.getParameter("login");
-        String password = req.getParameter("password");
         if (model.checkUser(login)) {
             ServletContext servletContext = getServletContext();
+            req.setAttribute("atributeName",login);
             RequestDispatcher requestDispatcher = servletContext.getRequestDispatcher("/hello.jsp");
             requestDispatcher.forward(req, resp);
         } else {

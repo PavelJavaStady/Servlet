@@ -9,7 +9,7 @@
 <html>
 <body>
 <div style="text-align: center;">
-    <h1>Enter the site</h1>
+    <h1>Registration</h1>
     <br />
     <form action = "/registration" method = "POST">
         Name:  <input type = "text" name = "name">
