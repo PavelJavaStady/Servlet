@@ -5,8 +5,8 @@
 </head>
 <body>
 <div style="text-align: center;">
-    <h1>Hell on the site!!!</h1>
-    <br />
+    <h1>Hello </h1>
+    <p><%=request.getParameter("login")%></p>
     <div>
         <button onclick="location.href='/login'">leave the site</button>
     </div>
